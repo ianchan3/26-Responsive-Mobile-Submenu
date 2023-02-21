@@ -31,9 +31,24 @@ const closeMenu = () => {
   hamburger.style.display = "block";
   menuWrapper.style.transform = "translateX(-200%)";
   menu.style.transform = "translateX(200%)";
-
+  subMenuThree.style.transform = "translateX(-100%)";
 }
 
 hamburger.addEventListener("click", showMenu);
 close.addEventListener("click", closeMenu);
 menuWrapper.addEventListener("click", closeMenu)
+
+
+const thirdLink = document.querySelector(".third-link");
+const backMenu = document.querySelector(".back-to-menu");
+const subMenuThree = document.querySelector(".submenu-three");
+
+thirdLink.addEventListener("click", () => {
+  menu.style.transform = "translateX(-200%)";
+  subMenuThree.style.transform = "translateX(0)";
+})
+
+backMenu.addEventListener("click", () => {
+  subMenuThree.style.transform = "translateX(-100%)";
+  menu.style.transform = "translateX(0)";
+})
